@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[354]]>
+    </line>
+    <line>
+      <![CDATA[1501450028 student is fail]]>
+    </line>
+    <line>
+      <![CDATA[2101450018 2.5]]>
+    </line>
+    <line>
+      <![CDATA[2101450018 2.5]]>
+    </line>
+    <line>
+      <![CDATA[2101450052 1.0]]>
+    </line>
+    <line>
+      <![CDATA[2101450052 1.0]]>
+    </line>
+    <line>
+      <![CDATA[3101450010 student is fail]]>
+    </line>
+    <line>
+      <![CDATA[5101450023 1.0]]>
+    </line>
+    <line>
+      <![CDATA[5101450023 1.0]]>
+    </line>
+    <line>
+      <![CDATA[5101450034 1.5]]>
+    </line>
+    <line>
+      <![CDATA[5101450034 1.5]]>
+    </line>
+    <line>
+      <![CDATA[5101450042 student is fail]]>
+    </line>
+    <line>
+      <![CDATA[5101450043 2.0]]>
+    </line>
+    <line>
+      <![CDATA[5101450043 2.0]]>
+    </line>
+    <line>
+      <![CDATA[5101450045 2.0]]>
+    </line>
+    <line>
+      <![CDATA[5101450045 2.0]]>
+    </line>
+    <line>
+      <![CDATA[6301450007 student is fail]]>
+    </line>
+    <line>
+      <![CDATA[6301450023 2.0]]>
+    </line>
+    <line>
+      <![CDATA[6301450023 2.0]]>
+    </line>
+    <line>
+      <![CDATA[6301450024 2.0]]>
+    </line>
+    <line>
+      <![CDATA[6301450024 2.0]]>
+    </line>
+    <line>
+      <![CDATA[8101450032 student is fail]]>
+    </line>
+    <line>
+      <![CDATA[8101450044 0.5]]>
+    </line>
+    <line>
+      <![CDATA[8101450044 0.5]]>
+    </line>
+    <line>
+      <![CDATA[5101450019  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[4101450041  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[5101450002  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[4101450014  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[1501450010  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[5101450038  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[1501450038  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[5101450052  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[1501450043  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[2101450021  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[7101450010  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[4101450019  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[5101450055  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[5101450027  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[4101450060  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[5101450006  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[1501450008  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[4101450053  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[5101450060  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[2101450051  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[2101450013  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[2101450017  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[5101450049  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[2101450007  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[7101450015  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[2101450014  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[6301450033  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[6301450008  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[8101450004  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[6301450028  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[6301450011  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[1501450007  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[1501450020  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[2101450019  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[5101450047  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[3101450012  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[7101450020  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[5101450051  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[1501450019  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[4101450024  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[5101450039  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[5101450018  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[1501450034  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[1501450012  Student is Absent]]>
+    </line>
+    <line>
+      <![CDATA[4101450038  Student is Absent]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2025-08-25T17:01:31 IST" name="Default suite" finished-at="2025-08-25T17:01:34 IST" duration-ms="3359">
+    <groups>
+    </groups>
+    <test started-at="2025-08-25T17:01:31 IST" name="Default test" finished-at="2025-08-25T17:01:34 IST" duration-ms="3359">
+      <class name="newGraceMarks2Final">
+        <test-method signature="GraceMarksCal()[pri:0, instance:newGraceMarks2Final@6e4566f1]" started-at="2025-08-25T17:01:31 IST" name="GraceMarksCal" finished-at="2025-08-25T17:01:34 IST" duration-ms="3278" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[354]]>
+            </line>
+            <line>
+              <![CDATA[1501450028 student is fail]]>
+            </line>
+            <line>
+              <![CDATA[2101450018 2.5]]>
+            </line>
+            <line>
+              <![CDATA[2101450018 2.5]]>
+            </line>
+            <line>
+              <![CDATA[2101450052 1.0]]>
+            </line>
+            <line>
+              <![CDATA[2101450052 1.0]]>
+            </line>
+            <line>
+              <![CDATA[3101450010 student is fail]]>
+            </line>
+            <line>
+              <![CDATA[5101450023 1.0]]>
+            </line>
+            <line>
+              <![CDATA[5101450023 1.0]]>
+            </line>
+            <line>
+              <![CDATA[5101450034 1.5]]>
+            </line>
+            <line>
+              <![CDATA[5101450034 1.5]]>
+            </line>
+            <line>
+              <![CDATA[5101450042 student is fail]]>
+            </line>
+            <line>
+              <![CDATA[5101450043 2.0]]>
+            </line>
+            <line>
+              <![CDATA[5101450043 2.0]]>
+            </line>
+            <line>
+              <![CDATA[5101450045 2.0]]>
+            </line>
+            <line>
+              <![CDATA[5101450045 2.0]]>
+            </line>
+            <line>
+              <![CDATA[6301450007 student is fail]]>
+            </line>
+            <line>
+              <![CDATA[6301450023 2.0]]>
+            </line>
+            <line>
+              <![CDATA[6301450023 2.0]]>
+            </line>
+            <line>
+              <![CDATA[6301450024 2.0]]>
+            </line>
+            <line>
+              <![CDATA[6301450024 2.0]]>
+            </line>
+            <line>
+              <![CDATA[8101450032 student is fail]]>
+            </line>
+            <line>
+              <![CDATA[8101450044 0.5]]>
+            </line>
+            <line>
+              <![CDATA[8101450044 0.5]]>
+            </line>
+            <line>
+              <![CDATA[5101450019  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[4101450041  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[5101450002  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[4101450014  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[1501450010  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[5101450038  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[1501450038  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[5101450052  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[1501450043  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[2101450021  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[7101450010  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[4101450019  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[5101450055  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[5101450027  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[4101450060  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[5101450006  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[1501450008  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[4101450053  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[5101450060  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[2101450051  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[2101450013  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[2101450017  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[5101450049  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[2101450007  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[7101450015  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[2101450014  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[6301450033  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[6301450008  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[8101450004  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[6301450028  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[6301450011  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[1501450007  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[1501450020  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[2101450019  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[5101450047  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[3101450012  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[7101450020  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[5101450051  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[1501450019  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[4101450024  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[5101450039  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[5101450018  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[1501450034  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[1501450012  Student is Absent]]>
+            </line>
+            <line>
+              <![CDATA[4101450038  Student is Absent]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- GraceMarksCal -->
+      </class> <!-- newGraceMarks2Final -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
