@@ -13,7 +13,7 @@ public class StudentAnswerBatchProcessor28 {
     static List<String> modelParas;
 
     public static void main(String[] args) throws Exception {
-        File folder = new File("F:\\desktop backup 5 july 25\\GCC TBC MAY 2025 AUTO\\marking\\New folder");
+        File folder = new File("F:\\GCC  TBC December 2025\\Marking\\Eng 40\\Diff_SpeedAnswer\\zero cases");
         File compareDir = new File(folder.getParentFile(), folder.getName() + "_Compared");
         if (!compareDir.exists()) compareDir.mkdirs();
 
@@ -33,7 +33,7 @@ public class StudentAnswerBatchProcessor28 {
             String[] parts = studentFile.getName().split("_");
             String seatno = parts[1], batchname = parts[2];
             int course1 = seatno.substring(4, 6).equals("15") ? 1 : 2;
-            try (FileInputStream fis = new FileInputStream("F:\\desktop backup 5 july 25\\GCC TBC MAY 2025 AUTO\\allocation\\BathwiseSubjective.xlsx");
+            try (FileInputStream fis = new FileInputStream("F:\\GCC  TBC December 2025\\Question\\allocation\\Batch Wise Subjective.xlsx");//allocation
                  Workbook wb1 = new XSSFWorkbook(fis)) {
                 for (Row row : wb1.getSheetAt(0)) {
                     if (row.getRowNum() == 0) continue;
@@ -42,7 +42,7 @@ public class StudentAnswerBatchProcessor28 {
                         String fileName = getCellValueAsString(row.getCell(2));
                         if ((course1 == 1 && fileName.startsWith("Eng30 Speed")) ||
                             (course1 == 2 && fileName.startsWith("Eng 40 Speed"))) {
-                            modelFile = new File("F:\\desktop backup 5 july 25\\GCC TBC MAY 2025 AUTO\\allocation\\New folder\\All_Subjective_Eng30\\" + fileName);
+                            modelFile = new File("F:\\GCC  TBC December 2025\\Question\\ENGLISH\\All 30&40\\" + fileName);
                             break;
                         }
                     }

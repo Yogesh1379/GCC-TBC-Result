@@ -14,8 +14,9 @@ public class Compare_OldResult_FinalResult_Optimized {
     public static void main(String[] args) throws EncryptedDocumentException, IOException {
         IOUtils.setByteArrayMaxOverride(200000000);
 
-        File file1 = new File("C:\\Users\\User\\Desktop\\Grace marks\\ssd\\RESULT1.xlsx");
-        File file2 = new File("C:\\Users\\User\\Desktop\\Grace marks\\ssd\\25-08-2025 After second change\\RESULT.xlsx");
+        File file1 = new File("C:\\Users\\User\\Desktop\\New folder (2)\\Book1.xlsx");// old
+
+        File file2 = new File("C:\\Users\\User\\Desktop\\New folder (2)\\Result.xlsx");// new
 
         FileInputStream fis1 = new FileInputStream(file1);
         FileInputStream fis2 = new FileInputStream(file2);
@@ -23,8 +24,8 @@ public class Compare_OldResult_FinalResult_Optimized {
         Workbook wb1 = WorkbookFactory.create(fis1);
         Workbook wb2 = WorkbookFactory.create(fis2);
 
-        Sheet sheet1 = wb1.getSheet("30");
-        Sheet sheet2 = wb2.getSheet("30");
+        Sheet sheet1 = wb1.getSheet("Sheet1");
+        Sheet sheet2 = wb2.getSheet("Sheet2");
 
         DataFormatter df = new DataFormatter();
 
@@ -65,6 +66,7 @@ public class Compare_OldResult_FinalResult_Optimized {
             if (r == null) continue;
 
             String seat = df.formatCellValue(r.getCell(3));
+            System.out.println(seat);
             if (seat.isEmpty()) continue;
 
             String newMarks = df.formatCellValue(r.getCell(21));

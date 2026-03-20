@@ -11,7 +11,7 @@ public class StudentAnswerBatchProcessor24 {
     static File modelFile = null;
 
     public static void main(String[] args) throws Exception {
-        File folder = new File("C:\\Users\\User\\Desktop\\New folder (2)\\New folder");
+        File folder = new File("F:\\Desktop backup 10-10-2025\\New folder\\New folder\\New folder");
         File compareDir = new File(folder.getParentFile(), folder.getName() + "_Compared");
         if (!compareDir.exists()) compareDir.mkdirs();
 
@@ -44,7 +44,7 @@ public class StudentAnswerBatchProcessor24 {
             if (seatno.length() >= 10) {
                 String course = seatno.substring(4, 6);
                 int course1 = course.equals("15") ? 1 : (course.equals("16") ? 2 : 0);
-                FileInputStream fis = new FileInputStream("F:\\desktop backup 5 july 25\\GCC TBC MAY 2025 AUTO\\allocation\\BathwiseSubjective.xlsx");
+                FileInputStream fis = new FileInputStream("F:\\GCC-TBC October  repeaters\\eng allocation\\Batch Wise Subjective (1).xlsx");
                 Workbook workbook1 = new XSSFWorkbook(fis);
                 Sheet sheet1 = workbook1.getSheetAt(0);
 
@@ -60,7 +60,7 @@ public class StudentAnswerBatchProcessor24 {
                         String fileCandidate = getCellValueAsString(subjectiveCell);
                         if ((fileCandidate.startsWith("Eng30 Speed") && course1 == 1) ||
                             (fileCandidate.startsWith("Eng 40 Speed") && course1 == 2)) {
-                            modelFile = new File("F:\\desktop backup 5 july 25\\GCC TBC MAY 2025 AUTO\\allocation\\New folder\\All_Subjective_Eng30\\" + fileCandidate);
+                            modelFile = new File("F:\\GCC-TBC October  repeaters\\Question files\\SUBJECTIE-\\ENG-40\\ENG 40-SPEED\\" + fileCandidate);
                             break;
                         }
                     }

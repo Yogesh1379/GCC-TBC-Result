@@ -13,7 +13,7 @@ public class StudentAnswerBatchProcessor22 {
 	static int blankLineCount = 0;
     @SuppressWarnings("resource")
 	public static void main(String[] args) throws Exception {
-        File folder = new File("C:\\Users\\User\\Desktop\\New folder (2)\\New folder (2)");
+        File folder = new File("F:\\GCC  TBC December 2025\\Marking\\Eng 40\\Diff_SpeedAnswer\\zero cases");
         File compareDir = new File(folder.getParentFile(), folder.getName() + "_Compared");
         if (!compareDir.exists()) compareDir.mkdirs();
 //        File modelFile = new File("C:\\Users\\User\\Desktop\\Eng30 Speed 4.docx");
@@ -67,7 +67,7 @@ public class StudentAnswerBatchProcessor22 {
         			course1=2;
         		}
 //        		System.out.println(course);
-        		 FileInputStream fis = new FileInputStream("F:\\desktop backup 5 july 25\\GCC TBC MAY 2025 AUTO\\allocation\\BathwiseSubjective.xlsx");
+        		 FileInputStream fis = new FileInputStream("F:\\GCC  TBC December 2025\\Question\\allocation\\Batch Wise Subjective.xlsx");
         		    Workbook workbook1 = new XSSFWorkbook(fis);
         		    Sheet sheet1 = workbook1.getSheetAt(0); // assuming data is in first sheet
 
@@ -91,14 +91,14 @@ public class StudentAnswerBatchProcessor22 {
 //        		        	System.out.println(course1);
         		            if (fileCandidate.startsWith("Eng30 Speed") && course1==1) {
         		            	System.out.println(fileCandidate);
-        		            	modelFile=new File("F:\\desktop backup 5 july 25\\GCC TBC MAY 2025 AUTO\\allocation\\New folder\\All_Subjective_Eng30\\"+fileCandidate);
+        		            	modelFile=new File("F:\\GCC  TBC December 2025\\Question\\ENGLISH\\All 30&40\\"+fileCandidate);
         		            	
         		            	 break;   
         		            }
         		          
         		            else if(fileCandidate.startsWith("Eng 40 Speed") && course1==2) {
         		            	System.out.println(fileCandidate);
-        		               	modelFile=new File("F:\\desktop backup 5 july 25\\GCC TBC MAY 2025 AUTO\\allocation\\New folder\\All_Subjective_Eng30\\"+fileCandidate);
+        		               	modelFile=new File("F:\\GCC  TBC December 2025\\Question\\ENGLISH\\All 30&40\\"+fileCandidate);
         		               
         		                break;
         		        }

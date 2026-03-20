@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="newGraceMarks2Final">
+      <class name="GRACE_MARKS.newResultWithGraceFinal">
         <methods>
-          <include name="GraceMarksCal"/>
+          <include name="resultTest"/>
         </methods>
-      </class> <!-- newGraceMarks2Final -->
+      </class> <!-- GRACE_MARKS.newResultWithGraceFinal -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
