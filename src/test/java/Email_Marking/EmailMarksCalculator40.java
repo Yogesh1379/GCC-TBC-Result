@@ -8,7 +8,7 @@ import java.io.*;
 public class EmailMarksCalculator40 {
 
     public static void main(String[] args) throws IOException {
-        FileInputStream fis = new FileInputStream("F:\\GCC  TBC December 2025\\Marking\\Marathi 30\\Email\\EmailFeb2026\\MARATHIHIN40.xlsx");
+        FileInputStream fis = new FileInputStream("F:\\GCCTBC-APR 2026\\Email marking\\marathi\\marathi40.xlsx");
         Workbook workbook = new XSSFWorkbook(fis);
         Sheet sheet = workbook.getSheetAt(0);
 
@@ -28,26 +28,26 @@ public class EmailMarksCalculator40 {
             if (row.getRowNum() == 0) continue; // Skip header
 
             String Questionattachment1 = getCellValue(row.getCell(1));
-            String questioncontent = getCellValue(row.getCell(2));
-            String questionsubject = getCellValue(row.getCell(3));
-            String questiontosend = getCellValue(row.getCell(4));
-            String emailquestionattachment2 = getCellValue(row.getCell(16));
-            String emailquestioncc = getCellValue(row.getCell(17));
-            String emaiquestionbcc = getCellValue(row.getCell(18));
+            String questioncontent = getCellValue(row.getCell(3));
+            String questionsubject = getCellValue(row.getCell(4));
+            String questiontosend = getCellValue(row.getCell(5));
+            String emailquestionattachment2 = getCellValue(row.getCell(2));
+            String emailquestioncc = getCellValue(row.getCell(14));
+            String emaiquestionbcc = getCellValue(row.getCell(15));
 
-            String Attachment1 = getCellValue(row.getCell(5));
-            String Contents = getCellValue(row.getCell(6));
-            String Subject = getCellValue(row.getCell(7));
-            String ToSendMail = getCellValue(row.getCell(8));
+            String Attachment1 = getCellValue(row.getCell(6));
+            String Contents = getCellValue(row.getCell(8));
+            String Subject = getCellValue(row.getCell(9));
+            String ToSendMail = getCellValue(row.getCell(10));
 //            String BatchName = getCellValue(row.getCell(21));
-            String IsSendStr = getCellValue(row.getCell(9));
-            String emailattachment2 = getCellValue(row.getCell(13));
-            String emailcc = getCellValue(row.getCell(14));
-            String emailbcc = getCellValue(row.getCell(15));
+            String IsSendStr = getCellValue(row.getCell(11));
+            String emailattachment2 = getCellValue(row.getCell(7));
+            String emailcc = getCellValue(row.getCell(16));
+            String emailbcc = getCellValue(row.getCell(17));
 
             int IsSend = IsSendStr.equals("1") ? 1 : 0;
 
-            String SeatNumber = getCellValue(row.getCell(10));
+            String SeatNumber = getCellValue(row.getCell(12));
 
             // Calculate content marks + mistakes
             ContentResult result = calculateContentMarks(questioncontent, Contents);
@@ -84,7 +84,7 @@ public class EmailMarksCalculator40 {
         }
 
         // Write Excel
-        FileOutputStream fos = new FileOutputStream("F:\\GCC  TBC December 2025\\Marking\\marathi 40\\email\\Email MAR40 Marks2.xlsx");
+        FileOutputStream fos = new FileOutputStream("F:\\GCCTBC-APR 2026\\Email marking\\marathi\\marking\\Email Marathi40 Marks.xlsx");
         outputWorkbook.write(fos);
         fos.close();
         workbook.close();
@@ -213,19 +213,19 @@ public class EmailMarksCalculator40 {
                 // Try to detect an extra word in answer (answer has an inserted word)
                 if (j + 1 < answerWords.length && qw.equals(answerWords[j + 1].trim())) {
                     mistakes++;
-                    wordMistakes.append("(extra) | ").append(aw).append("\n");
+                    wordMistakes.append("[ (extra) | ").append(aw).append(" ] ");
                     j++; // consume extra word from answer
                 }
                 // Try to detect a missing word in answer (answer missing qw)
                 else if (i + 1 < questionWords.length && questionWords[i + 1].trim().equals(aw)) {
                     mistakes++;
-                    wordMistakes.append(qw).append(" | (missing)\n");
+                    wordMistakes.append(" [ ").append(qw).append(" | (missing) ]");
                     i++; // consume missing word from question
                 }
                 // General mismatch (substitution)
                 else {
                     mistakes++;
-                    wordMistakes.append(qw).append(" | ").append(aw).append("\n");
+                    wordMistakes.append(" [ ").append(qw).append(" | ").append(aw).append(" ] ");
                     i++;
                     j++;
                 }
@@ -235,14 +235,14 @@ public class EmailMarksCalculator40 {
         // Remaining question words => missing in answer
         while (i < questionWords.length) {
             mistakes++;
-            wordMistakes.append(questionWords[i].trim()).append(" | (missing)\n");
+            wordMistakes.append(" [ ").append(questionWords[i].trim()).append(" | (missing) ]");
             i++;
         }
 
         // Remaining answer words => extra in answer
         while (j < answerWords.length) {
             mistakes++;
-            wordMistakes.append("(extra) | ").append(answerWords[j].trim()).append("\n");
+            wordMistakes.append("[ (extra) | ").append(answerWords[j].trim()).append(" ] ");
             j++;
         }
 

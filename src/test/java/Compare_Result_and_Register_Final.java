@@ -16,16 +16,16 @@ public class Compare_Result_and_Register_Final {
 
         IOUtils.setByteArrayMaxOverride(1024 * 1024 * 1024);
 
-        String outputPath = "F:\\GCC-TBC October  repeaters\\Register Data\\Comparison_Output FINAL.xlsx";
+        String outputPath = "F:\\GCCTBC-APR 2026\\Register data\\Comparison_Output FINAL.xlsx";
 
-        File oldFile = new File("F:\\GCC-TBC October  repeaters\\Register Data\\FINAL 10-09-26\\30RESULT.xlsx");// old--register OR result
-        File newFile = new File("F:\\GCC-TBC October  repeaters\\Register Data\\OctRegisterData.xlsx"); // new--result or final register
+        File oldFile = new File("F:\\GCCTBC-APR 2026\\Register data\\40RESULT.xlsx");// old--register OR result
+        File newFile = new File("F:\\GCCTBC-APR 2026\\Register data\\Regi.xlsx"); // new--result or final register
 
         Workbook oldWb = WorkbookFactory.create(new FileInputStream(oldFile));
         Workbook newWb = WorkbookFactory.create(new FileInputStream(newFile));
 
-        Sheet oldSheet = oldWb.getSheet("Sheet2");          // RESULT sheet
-        Sheet newSheet = newWb.getSheetAt(1);               // REGISTER sheet
+        Sheet oldSheet = oldWb.getSheetAt(1);          // RESULT sheet
+        Sheet newSheet = newWb.getSheetAt(0);               // REGISTER sheet
 
         DataFormatter df = new DataFormatter();
 
@@ -104,7 +104,7 @@ public class Compare_Result_and_Register_Final {
             String newCenterAddr = df.formatCellValue(r.getCell(5));
             String newInstCode   = df.formatCellValue(r.getCell(7));
             String newstdname   = df.formatCellValue(r.getCell(8));
-
+System.out.println(newstdname);
             Row outRow = outSheet.createRow(rowIndex++);
             outRow.createCell(0).setCellValue(seat);
 

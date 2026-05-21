@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="GRACE_MARKS.newResultWithGraceFinal">
+      <class name="Compare_CertificateData_with_Result.CompareCertificateAndResult">
         <methods>
-          <include name="resultTest"/>
+          <include name="compare"/>
         </methods>
-      </class> <!-- GRACE_MARKS.newResultWithGraceFinal -->
+      </class> <!-- Compare_CertificateData_with_Result.CompareCertificateAndResult -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

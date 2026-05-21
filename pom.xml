@@ -97,6 +97,11 @@
     <version>2.0.30</version>
 </dependency>
 
+   	<dependency>
+   		<groupId>CorruptFile</groupId>
+   		<artifactId>CorruptFile</artifactId>
+   		<version>0.0.1-SNAPSHOT</version>
+   	</dependency>
    </dependencies>
     <build>
         <plugins>

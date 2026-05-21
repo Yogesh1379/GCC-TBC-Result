@@ -21,11 +21,11 @@ import org.testng.annotations.Test;
 public class newTestResultFinal implements IAutoConstant {
     @Test
     public void resultTest() throws EncryptedDocumentException, IOException {
-        File file = new File("F:\\\\GCC  TBC December 2025\\\\Result\\\\New folder\\\\MarathiHindi40TentativeResult.xlsx");
+        File file = new File("F:\\GCCTBC-APR 2026\\Result\\final tentetive\\RstEnglish2.xlsx");
         FileInputStream fis = new FileInputStream(file);
         IOUtils.setByteArrayMaxOverride(200000000);
         Workbook wb = WorkbookFactory.create(fis);
-        Sheet sheet = wb.getSheetAt(0);
+        Sheet sheet = wb.getSheetAt(1);
         int rc = sheet.getLastRowNum();
         DataFormatter df = new DataFormatter();
         Workbook workbook1 = new XSSFWorkbook();
@@ -52,7 +52,7 @@ public class newTestResultFinal implements IAutoConstant {
             Double percent = Double.valueOf(per);
             String result = df.formatCellValue(row.getCell(22));
             String grade = df.formatCellValue(row.getCell(23));
-            String presentAbsent = df.formatCellValue(row.getCell(31));
+            String presentAbsent = df.formatCellValue(row.getCell(30));
             System.out.println(i + ":- " + seatNumber);
             String Result = "";
             double total = objmarks + speedMarks + EmailExcelLetter;
@@ -146,7 +146,7 @@ public class newTestResultFinal implements IAutoConstant {
                 Reporter.log(seatNumber + "  Student is Absent");
             }
         }
-        FileOutputStream fileOut = new FileOutputStream(new File("F:\\GCC  TBC December 2025\\Result\\New folder\\RESULT.xlsx"));
+        FileOutputStream fileOut = new FileOutputStream(new File("F:\\GCCTBC-APR 2026\\Result\\final tentetive\\RESULT40.xlsx"));
         // Write the workbook data to the file
         workbook1.write(fileOut);
     }

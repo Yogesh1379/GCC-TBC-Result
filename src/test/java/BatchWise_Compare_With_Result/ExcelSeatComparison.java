@@ -9,9 +9,9 @@ public class ExcelSeatComparison {
 
     public static void main(String[] args) throws Exception {
 
-        String file1Path = "F:\\GCC  TBC December 2025\\Result\\final and batchwise\\UPDATED-BATCH-WISE-JANUARY-2026-EXCEL\\Batchwise_MAR-40-January-2026-.xlsx";// batchwise
-        String file2Path = "F:\\GCC  TBC December 2025\\Result\\final and batchwise\\Final Result\\MarathiHindi40TentativeResult.xlsx";  /// result 
-        String outputPath = "F:\\GCC  TBC December 2025\\Result\\final and batchwise\\Mismatch_Report mar40.xlsx";
+        String file1Path = "F:\\GCCTBC-APR 2026\\Batchwise\\final\\HIN-40\\Batchwise_HIN-40-APRIL-2026.xlsx";// batchwise
+        String file2Path = "F:\\GCCTBC-APR 2026\\Result\\marathi\\TentativeResult3.xlsx";  /// result 
+        String outputPath = "F:\\GCCTBC-APR 2026\\Batchwise\\final\\HIN-40\\Mismatch_Report hindi40.xlsx";
 
         FileInputStream fis1 = new FileInputStream(file1Path);
         FileInputStream fis2 = new FileInputStream(file2Path);
@@ -20,7 +20,7 @@ public class ExcelSeatComparison {
         Workbook wb2 = new XSSFWorkbook(fis2);
 
         Sheet sheet1 = wb1.getSheetAt(0);
-        Sheet sheet2 = wb2.getSheetAt(0);
+        Sheet sheet2 = wb2.getSheetAt(1);
 
         // Columns to compare
         List<String> columnsToCompare = Arrays.asList(
@@ -59,8 +59,8 @@ public class ExcelSeatComparison {
         Row header = outputSheet.createRow(outputRowNum++);
         header.createCell(0).setCellValue("Seat No");
         header.createCell(1).setCellValue("Column Name");
-        header.createCell(2).setCellValue("File1 Value");
-        header.createCell(3).setCellValue("File2 Value");
+        header.createCell(2).setCellValue("Batchwise");
+        header.createCell(3).setCellValue("Result");
 
         // Compare rows
         for (int i = 1; i <= sheet1.getLastRowNum(); i++) {

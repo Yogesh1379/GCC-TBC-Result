@@ -12,9 +12,9 @@ public class Markcompare {
 
     public static void main(String[] args) throws IOException {
 
-        String file1Path = "F:\\GCC  TBC December 2025\\Marking\\marathi 40\\email\\Email MAR40 Marks2.xlsx";
-        String file2Path = "F:\\GCC  TBC December 2025\\Marking\\marathi 40\\email\\New Microsoft Excel Worksheet.xlsx";//vj
-        String outputPath = "F:\\GCC  TBC December 2025\\Marking\\marathi 40\\email\\comparisonOutput_separatedFinal2.xlsx";
+        String file1Path = "F:\\GCCTBC-APR 2026\\Email marking\\840 stud 501 batch marathi\\Email marathi30 Marks.xlsx";
+        String file2Path = "F:\\GCCTBC-APR 2026\\Email marking\\840 stud 501 batch marathi\\New Microsoft Excel Worksheet.xlsx";//vj
+        String outputPath = "F:\\GCCTBC-APR 2026\\Email marking\\840 stud 501 batch marathi\\comparisonOutput_marathi30.xlsx";
 
         DataFormatter formatter = new DataFormatter();
 
@@ -32,7 +32,7 @@ public class Markcompare {
                 if (row == null) continue;
 
                 Cell seatCell = row.getCell(0);  // Column A
-                Cell marksCell = row.getCell(9); // Column G
+                Cell marksCell = row.getCell(6); // Column G
 
                 if (seatCell == null || marksCell == null) continue;
 
@@ -49,7 +49,7 @@ public class Markcompare {
         Map<String, List<Double>> secondExcelData = new HashMap<>();
 
         try (Workbook wb2 = new XSSFWorkbook(new FileInputStream(file2Path))) {
-            Sheet sheet2 = wb2.getSheetAt(1);
+            Sheet sheet2 = wb2.getSheetAt(0);
 
             for (int i = 1; i <= sheet2.getLastRowNum(); i++) {
                 Row row = sheet2.getRow(i);

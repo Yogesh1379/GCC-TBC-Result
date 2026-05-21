@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.io.*;
 import java.util.regex.*;
 
-public class photocopycomp {
+public class photocopycompwithAnswerfile {
 
     // ✅ Read Word file text
     public static String readWordFile(File file) throws IOException {
@@ -45,7 +45,7 @@ public class photocopycomp {
             if (fifthSixth.equals("15") || fifthSixth.equals("16")) {
                 return seatNumber;
             } else {
-                System.out.println("⚠️ Skipped invalid seat number (5th–6th not 15/16): " + seatNumber + " in " + fileName);
+                System.out.println("⚠ Skipped invalid seat number (5th–6th not 15/16): " + seatNumber + " in " + fileName);
             }
         }
         return null;

@@ -18,11 +18,11 @@ public class newGraceMarks2Final  {
 	@Test
 	public void GraceMarksCal() throws EncryptedDocumentException, IOException
 	{
-		File file = new File("F:\\GCC  TBC December 2025\\Result\\New folder\\MarathiHindi40TentativeResult.xlsx");
+		File file = new File("F:\\GCCTBC-APR 2026\\Result\\final tentetive\\RstEnglish2.xlsx");
 		FileInputStream fis = new FileInputStream(file);
 		IOUtils.setByteArrayMaxOverride(200000000);
 		Workbook wb = WorkbookFactory.create(fis);
-		Sheet sheet = wb.getSheetAt(0);
+		Sheet sheet = wb.getSheetAt(1);
 		int rc = sheet.getLastRowNum();
 		Reporter.log(Integer.toString(rc),true);
 		DataFormatter df = new DataFormatter();
@@ -53,8 +53,8 @@ public class newGraceMarks2Final  {
 			Double stmt1 = Double.valueOf(stmt);
 			String ltr = df.formatCellValue(row.getCell(14));
 			Double ltr1 = Double.valueOf(ltr);
-			String presentAbsent = df.formatCellValue(row.getCell(31));
-			String graceex = df.formatCellValue(row.getCell(20));
+			String presentAbsent = df.formatCellValue(row.getCell(30));
+			String graceex = df.formatCellValue(row.getCell(33));
 			Double graceExcel = Double.valueOf(graceex);
 			double EmailExcelLetter = email1+stmt1+ltr1;
 			double objGrace = 10-objMarks;
@@ -98,7 +98,7 @@ public class newGraceMarks2Final  {
 			Reporter.log(seatNumber+"  Student is Absent");
 		}
 			}
-		FileOutputStream fileOut = new FileOutputStream(new File("F:\\GCC  TBC December 2025\\Result\\New folder\\Grace Marks ssd.xlsx"));
+		FileOutputStream fileOut = new FileOutputStream(new File("F:\\GCCTBC-APR 2026\\Result\\final tentetive\\Grace Marks Eng40.xlsx"));
 		// Write the workbook data to the file
 		workbook1.write(fileOut);
 		

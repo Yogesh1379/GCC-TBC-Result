@@ -19,7 +19,7 @@ import org.testng.annotations.Test;
 public class newResultWithGraceFinal implements IAutoConstant {
     @Test
     public void resultTest() throws EncryptedDocumentException, IOException {
-        File file = new File("F:\\GCC  TBC December 2025\\Result\\final 50 &60\\English60Result - Copy.xlsx");
+        File file = new File("F:\\GCCTBC-APR 2026\\Result\\Final\\FinalResult - Copy.xlsx");
         FileInputStream fis = new FileInputStream(file);
         IOUtils.setByteArrayMaxOverride(200000000);
         Workbook wb = WorkbookFactory.create(fis);
@@ -255,7 +255,7 @@ public class newResultWithGraceFinal implements IAutoConstant {
             }
 
         }
-        FileOutputStream fileOut = new FileOutputStream(new File("F:\\GCC  TBC December 2025\\Result\\final 50 &60\\60 RESULT WITH GRACE.xlsx"));
+        FileOutputStream fileOut = new FileOutputStream(new File("F:\\GCCTBC-APR 2026\\Result\\Final\\30RESULT WITH GRACE.xlsx"));
         // Write the workbook data to the file
         workbook1.write(fileOut);
     }

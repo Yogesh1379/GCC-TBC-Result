@@ -8,7 +8,7 @@ import java.io.*;
 public class EmailMarksCalculator30 {
 
     public static void main(String[] args) throws IOException {
-        FileInputStream fis = new FileInputStream("F:\\GCC  TBC December 2025\\Marking\\Marathi 30\\Email\\EmailFeb2026\\MARATHIHIN30.xlsx");
+        FileInputStream fis = new FileInputStream("F:\\GCCTBC-APR 2026\\Email marking\\840 stud 501 batch marathi\\MAR30EmailNew.xlsx");
         Workbook workbook = new XSSFWorkbook(fis);
         Sheet sheet = workbook.getSheetAt(0);
 
@@ -71,7 +71,7 @@ public class EmailMarksCalculator30 {
         }
 
         // Write Excel
-        FileOutputStream fos = new FileOutputStream("F:\\GCC  TBC December 2025\\Marking\\Marathi 30\\Email\\EmailMarathi30 Marks.xlsx");
+        FileOutputStream fos = new FileOutputStream("F:\\GCCTBC-APR 2026\\Email marking\\840 stud 501 batch marathi\\Email marathi30 Marks.xlsx");
         outputWorkbook.write(fos);
         fos.close();
         workbook.close();
@@ -200,19 +200,19 @@ public class EmailMarksCalculator30 {
                 // Try to detect an extra word in answer (answer has an inserted word)
                 if (j + 1 < answerWords.length && qw.equals(answerWords[j + 1].trim())) {
                     mistakes++;
-                    wordMistakes.append("(extra) | ").append(aw).append("\n");
+                    wordMistakes.append(" [ (extra) | ").append(aw).append(" ]");
                     j++; // consume extra word from answer
                 }
                 // Try to detect a missing word in answer (answer missing qw)
                 else if (i + 1 < questionWords.length && questionWords[i + 1].trim().equals(aw)) {
                     mistakes++;
-                    wordMistakes.append(qw).append(" | (missing)\n");
+                    wordMistakes.append("[ ").append(qw).append(" | (missing) ]");
                     i++; // consume missing word from question
                 }
                 // General mismatch (substitution)
                 else {
                     mistakes++;
-                    wordMistakes.append(qw).append(" | ").append(aw).append("\n");
+                    wordMistakes.append("[ ").append(qw).append(" | ").append(aw).append(" ]");
                     i++;
                     j++;
                 }
@@ -222,14 +222,14 @@ public class EmailMarksCalculator30 {
         // Remaining question words => missing in answer
         while (i < questionWords.length) {
             mistakes++;
-            wordMistakes.append(questionWords[i].trim()).append(" | (missing)\n");
+            wordMistakes.append("[ ").append(questionWords[i].trim()).append(" | (missing) ] ");
             i++;
         }
 
         // Remaining answer words => extra in answer
         while (j < answerWords.length) {
             mistakes++;
-            wordMistakes.append("(extra) | ").append(answerWords[j].trim()).append("\n");
+            wordMistakes.append("[ (extra) | ").append(answerWords[j].trim()).append(" ] ");
             j++;
         }
 
