@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Compare_CertificateData_with_Result.CompareCertificateAndResult">
+      <class name="Speed_Question_Paper_Verification.Speed_question_Paper_verify">
         <methods>
-          <include name="compare"/>
+          <include name="questionFormatting"/>
         </methods>
-      </class> <!-- Compare_CertificateData_with_Result.CompareCertificateAndResult -->
+      </class> <!-- Speed_Question_Paper_Verification.Speed_question_Paper_verify -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

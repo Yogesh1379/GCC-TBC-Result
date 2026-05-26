@@ -1,16 +1,16 @@
-package BookmarkTesting;
+package BookmarkTesting_letter;
 
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.*;
 
-public class EmailMarksCalculator30 {
+public class EmailMarksCalculator40 {
 
     public static void main(String[] args) throws IOException {
-        FileInputStream fis = new FileInputStream("C:\\Users\\User\\Desktop\\EmailMarking Oct\\eng3040emailoctexam.xlsx");
+        FileInputStream fis = new FileInputStream("C:\\Users\\User\\Desktop\\Book1.xlsx");
         Workbook workbook = new XSSFWorkbook(fis);
-        Sheet sheet = workbook.getSheetAt(0);
+        Sheet sheet = workbook.getSheetAt(1);
 
         // Create output workbook
         Workbook outputWorkbook = new XSSFWorkbook();
@@ -18,7 +18,7 @@ public class EmailMarksCalculator30 {
 
         // Header row
         Row headerRow = outputSheet.createRow(0);
-        String[] headers = {"SeatNumber", "AttachmentMarks", "SubjectMarks", "ToSendMailMarks", "ContentMarks", "IsSendMarks", "TotalMarks","Batch", "WordMistakes"};
+        String[] headers = {"SeatNumber", "AttachmentMarks", "SubjectMarks", "ToSendMailMarks", "ContentMarks", "IsSendMarks","Bcc","Attachment 2","CC", "TotalMarks","Batch", "WordMistakes"};
         for (int i = 0; i < headers.length; i++) {
             headerRow.createCell(i).setCellValue(headers[i]);
         }
@@ -31,6 +31,9 @@ public class EmailMarksCalculator30 {
             String questioncontent = getCellValue(row.getCell(2));
             String questionsubject = getCellValue(row.getCell(3));
             String questiontosend = getCellValue(row.getCell(4));
+            String emailquestionattachment2 = getCellValue(row.getCell(16));
+            String emailquestioncc = getCellValue(row.getCell(17));
+            String emaiquestionbcc = getCellValue(row.getCell(18));
 
             String Attachment1 = getCellValue(row.getCell(5));
             String Contents = getCellValue(row.getCell(6));
@@ -38,6 +41,10 @@ public class EmailMarksCalculator30 {
             String ToSendMail = getCellValue(row.getCell(8));
             String BatchName = getCellValue(row.getCell(21));
             String IsSendStr = getCellValue(row.getCell(9));
+            String emailattachment2 = getCellValue(row.getCell(13));
+            String emailcc = getCellValue(row.getCell(14));
+            String emailbcc = getCellValue(row.getCell(15));
+
             int IsSend = IsSendStr.equals("1") ? 1 : 0;
 
             String SeatNumber = getCellValue(row.getCell(10));
@@ -46,16 +53,19 @@ public class EmailMarksCalculator30 {
             ContentResult result = calculateContentMarks(questioncontent, Contents);
 
             // Marks calculation
-            int attachmentMarks = Questionattachment1.equals(Attachment1) ? 1 : 0;
-//            int subjectMarks = questionsubject.equals(Subject) ? 1 : 0;
+            double attachmentMarks = Questionattachment1.equals(Attachment1) ? 0.5 : 0;
+//            double subjectMarks = questionsubject.equals(Subject) ? 0.5 : 0;
             // Normalize spaces before comparing Subject
             String normalizedQuestionSubject = questionsubject.replaceAll("\\s+", " ").trim();
             String normalizedSubject = Subject.replaceAll("\\s+", " ").trim();
-            int subjectMarks = normalizedQuestionSubject.equals(normalizedSubject) ? 1 : 0;
+            double subjectMarks = normalizedQuestionSubject.equals(normalizedSubject) ? 0.5 : 0;
 
-            int toSendMarks = questiontosend.equals(ToSendMail) ? 1 : 0;
+            double toSendMarks = questiontosend.equals(ToSendMail) ? 0.5 : 0;
+            double attachment2Marks = emailquestionattachment2.equals(emailattachment2) ? 0.5 : 0;
+           double ccMarks= emailquestioncc.equals(emailcc) ? 0.5:0;
+          double bccMarks= emaiquestionbcc.equals(emailbcc) ? 0.5:0;
             int isSendMarks = IsSend;
-            double totalMarks = attachmentMarks + subjectMarks + toSendMarks + result.contentMarks + isSendMarks;
+            double totalMarks = attachmentMarks + subjectMarks + toSendMarks + result.contentMarks + isSendMarks + attachment2Marks + ccMarks + bccMarks;
 
             // Write to output
             Row outRow = outputSheet.createRow(outputRowNum++);
@@ -65,13 +75,16 @@ public class EmailMarksCalculator30 {
             outRow.createCell(3).setCellValue(toSendMarks);
             outRow.createCell(4).setCellValue(result.contentMarks);
             outRow.createCell(5).setCellValue(isSendMarks);
-            outRow.createCell(6).setCellValue(totalMarks);
-            outRow.createCell(7).setCellValue(BatchName);
-            outRow.createCell(8).setCellValue(result.wordMistakes); // ✅ Added mistakes text
+            outRow.createCell(6).setCellValue(bccMarks);
+            outRow.createCell(7).setCellValue(attachment2Marks);
+            outRow.createCell(8).setCellValue(ccMarks);
+            outRow.createCell(9).setCellValue(totalMarks);
+            outRow.createCell(10).setCellValue(BatchName);
+            outRow.createCell(11).setCellValue(result.wordMistakes); // ✅ Added mistakes text
         }
 
         // Write Excel
-        FileOutputStream fos = new FileOutputStream("C:\\Users\\User\\Desktop\\EmailMarking Oct\\Marks\\EmailEnglish30OCTMarks.xlsx");
+        FileOutputStream fos = new FileOutputStream("C:\\Users\\User\\Desktop\\EmailMarking Oct\\Marks\\EmailEng40OCTMarks.xlsx");
         outputWorkbook.write(fos);
         fos.close();
         workbook.close();

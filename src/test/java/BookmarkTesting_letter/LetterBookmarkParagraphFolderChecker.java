@@ -1,4 +1,4 @@
-package BookmarkTesting;
+package BookmarkTesting_letter;
 import org.apache.poi.xwpf.usermodel.*;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
 
