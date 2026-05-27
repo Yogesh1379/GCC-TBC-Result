@@ -88,7 +88,7 @@ public class Speed_question_Paper_verify {
 						Row row = outsheet.createRow(rowcount++);
 						String previousWord = matcher.group(1);
 						row.createCell(0).setCellValue(filename);
-						row.createCell(1).setCellValue("Double / More than 2 spaces after word");
+						row.createCell(1).setCellValue("Two / More than 2 spaces after word");
 						row.createCell(2).setCellValue(previousWord);
 //						System.out.println(previousWord+" **********");
 					}
@@ -100,6 +100,15 @@ public class Speed_question_Paper_verify {
 						row.createCell(0).setCellValue(filename);
 						row.createCell(1).setCellValue("Before tab character is present");
 //						row.createCell(2).setCellValue(previousWord);
+					}
+					
+					Pattern patter2 = Pattern.compile("\\s+\\t");
+					Matcher matcher2 = patter2.matcher(text);
+					while(matcher2.find()) {
+						Row row = outsheet.createRow(rowcount++);
+//						String previousWord = matcher.group(1);
+						row.createCell(0).setCellValue(filename);
+						row.createCell(1).setCellValue("Before tab Space is present");
 					}
 
 				}

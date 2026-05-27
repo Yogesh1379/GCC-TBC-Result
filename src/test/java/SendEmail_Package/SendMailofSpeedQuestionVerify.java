@@ -68,18 +68,17 @@ public class SendMailofSpeedQuestionVerify {
                 + "QA Automation Team");
 
         // Attachment
-        MimeBodyPart attachmentPart =
-                new MimeBodyPart();
-
-        attachmentPart.attachFile(
-                new File(reportPath));
-
+        MimeBodyPart attachmentPart1 = new MimeBodyPart();
+        MimeBodyPart attachmentPart2 =new MimeBodyPart();
+        attachmentPart1.attachFile(new File(reportPath));
+attachmentPart2.attachFile(new File("C:\\Users\\User\\Desktop\\vedashree work\\Automation\\GCC_TBC_Result_Verify\\test-output\\emailable-report.html"));
         Multipart multipart =
                 new MimeMultipart();
 
         multipart.addBodyPart(messageBodyPart);
 
-        multipart.addBodyPart(attachmentPart);
+        multipart.addBodyPart(attachmentPart1);
+        multipart.addBodyPart(attachmentPart2);
 
         message.setContent(multipart);
 
